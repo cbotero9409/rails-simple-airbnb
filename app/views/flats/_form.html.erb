@@ -1,0 +1,10 @@
+<% title = flat.new_record? ? 'New flat' : 'Edit flat' %>
+<h1><%= title %></h1>
+<%= simple_form_for(flat) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :price_per_night %>
+  <%= f.input :number_of_guests %>
+  <%= f.submit "Save flat", class: "btn btn-primary" %>
+<% end %>
